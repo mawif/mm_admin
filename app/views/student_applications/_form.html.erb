@@ -1,4 +1,4 @@
-<%= form_with(model: student_application) do |form| %>
+<%= form_with(model: [@campaign, student_application]) do |form| %>
   <% if student_application.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(student_application.errors.count, "error") %> prohibited this student_application from being saved:</h2>
@@ -44,11 +44,6 @@
   <div>
     <%= form.label :question5, style: "display: block" %>
     <%= form.text_area :question5 %>
-  </div>
-
-  <div>
-    <%= form.label :campaign_id, style: "display: block" %>
-    <%= form.text_field :campaign_id %>
   </div>
 
   <div>

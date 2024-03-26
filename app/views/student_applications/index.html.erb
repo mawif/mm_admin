@@ -6,9 +6,9 @@
   <% @student_applications.each do |student_application| %>
     <%= render student_application %>
     <p>
-      <%= link_to "Show this student application", student_application %>
+      <%= link_to "Show this student application", campaign_student_application_path(@campaign, student_application) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New student application", new_student_application_path %>
+<%= link_to "New student application", new_campaign_student_application_path %>

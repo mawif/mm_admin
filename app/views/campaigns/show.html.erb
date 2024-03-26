@@ -8,3 +8,15 @@
 
   <%= button_to "Destroy this campaign", @campaign, method: :delete %>
 </div>
+
+Applications:
+
+<table>
+  <% @student_applications.each do |student_application| %>
+    <%= render 'student_applications/show_tr_short', campaign: @campaign, student_application: student_application%>
+  <% end %>
+</table>
+
+<div>
+  <%= render "student_applications/import", campaign: @campaign %>
+</div>

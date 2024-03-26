@@ -8,6 +8,7 @@ class CampaignsController < ApplicationController
 
   # GET /campaigns/1
   def show
+    @student_applications = @campaign.student_applications
   end
 
   # GET /campaigns/new

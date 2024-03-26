@@ -3,8 +3,8 @@
 <%= render @student_application %>
 
 <div>
-  <%= link_to "Edit this student application", edit_student_application_path(@student_application) %> |
-  <%= link_to "Back to student applications", student_applications_path %>
+  <%= link_to "Edit this student application", edit_campaign_student_application_path(@campaign, @student_application) %> |
+  <%= link_to "Back to student applications", campaign_student_applications_path(@campaign) %>
 
-  <%= button_to "Destroy this student application", @student_application, method: :delete %>
+  <%= button_to "Destroy this student application", [@campaign, @student_application], method: :delete %>
 </div>
